@@ -1,0 +1,46 @@
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Pipenv
+# Do not ignore Pipfile or Pipfile.lock
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Static and uploaded media files
+/staticfiles/
+/media/
+
+# Testing and coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Type checking and linting
+.mypy_cache/
+.ruff_cache/
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
