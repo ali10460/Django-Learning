@@ -7,9 +7,14 @@ from django.utils import timezone
 class Genre(models.Model):
     name = models.CharField(255)
 
+    def __str__(
+        self,
+    ):  # this method change the object of the genre into the string in django admin
+        return self.name
+
 
 class Movie(models.Model):
-    title = models.CharField(255)
+    title = models.CharField()
     release_year = models.IntegerField()
     number_in_stock = models.IntegerField()
     daily_rental_rate = models.FloatField()
