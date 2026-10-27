@@ -1,0 +1,28 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie</title>
+    <link rel="stylesheet" href="{% static 'movies/css/style.css' %}" />
+  </head>
+  <body>
+    <dl>
+      <dt>Title</dt>
+      <dd>{{movie.title}}</dd>
+      <hr />
+      <dt>Release Year</dt>
+      <dd>{{movie.release_year}}</dd>
+      <hr />
+      <dt>Genre</dt>
+      <dd>{{movie.genre}}</dd>
+      <hr />
+      <dt>Stock</dt>
+      <dd>{{movie.number_in_stock}}</dd>
+      <hr />
+      <dt>Daily Rate</dt>
+      <dd>{{movie.daily_rental_rate}}</dd>
+    </dl>
+  </body>
+</html>

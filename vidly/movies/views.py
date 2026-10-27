@@ -13,4 +13,10 @@ def index(request):
     # Movie.objects.get(id=1)
     # return HttpResponse(output)
 
-    return render(request, 'movies/index.html', {'movies': movies})
+    return render(request, "movies/index.html", {"movies": movies})
+
+
+def details(request, movie_id):
+    id = Movie.objects.get(pk=movie_id)
+    return render(request, "movies/details.html", {"movie": id})
+    return HttpResponse(movie_id)
