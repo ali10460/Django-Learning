@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, Http404
 from .models import Movie
 
@@ -17,8 +17,5 @@ def index(request):
 
 
 def details(request, movie_id):
-    try:
-        id = Movie.objects.get(pk=movie_id)
-        return render(request, "movies/details.html", {"movie": id})
-    except Movie.DoesNotExist:
-        raise Http404()
+    id = get_object_or_404(Movie, pk=movie_id)
+    return render(request, "movies/details.html", {"movie": id})
